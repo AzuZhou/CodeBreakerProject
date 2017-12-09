@@ -7,7 +7,7 @@ function guess() {
   if (answer == '' || attempt == '') {
     setHiddenFields();
   }
-  console.log(input);
+
   if (!validateInput(input)) {
     return false;
   } else {
@@ -30,7 +30,7 @@ function guess() {
 //implement new functions here
 
 function setHiddenFields() {
-  answer = Math.floor(Math.random() * 9999 + 1).toString();
+  answer = Math.floor(Math.random() * 9999).toString();
   attempt = 0;
   while (answer.length < 4) {
     answer = '0' + answer;
